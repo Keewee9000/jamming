@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Tracklist from '../Tracklist/Tracklist';
 import styles from './Playlist.module.css';
 
