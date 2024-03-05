@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
-import './App.css';
+import styles from './App.css';
 import Spotify from './components/api/spotify.js';
 
 function App() {
@@ -44,11 +44,11 @@ function App() {
   }, [playlistName, playlistTracks]);
 
   return (
-    <div className="App">
-      <div className='header'>
+    <div className={styles.App}>
+      <div className={styles.header}>
         <h1>My Spotify Playlist Creator</h1>
         <SearchBar onSearch={search} />
-          <div className='lists'>
+          <div className={styles.lists}>
             <h2>Search Results</h2>
             <SearchResults
               searchResults={searchResults}
