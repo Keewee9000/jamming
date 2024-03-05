@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styles from './SearchBar.module.css';
 
-function SearchBar({ setSearchResults }) {
+function SearchBar(setSearchResults) {
   const [query, setQuery] = useState('');
-
-  const handleSearch = () => {
-    // Implement Spotify API search here and update setSearchResults
-  };
 
   return (
     <div className="SearchBar">
@@ -17,7 +13,7 @@ function SearchBar({ setSearchResults }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button className={styles.searchBar} onClick={handleSearch}>Search</button>
+      <button className={styles.searchBar} onClick={setSearchResults}>Search</button>
     </div>
   );
 }
