@@ -48,12 +48,16 @@ function App() {
       <div className={styles.header}>
         <h1>My Spotify Playlist Creator</h1>
         <SearchBar onSearch={search} />
-          <div className={styles.lists}>
-            <h2>Search Results</h2>
+      </div>
+      <div className={styles.lists}>
+        <div className={styles.searchResults}>
+          <h2>Search Results</h2>
             <SearchResults
               searchResults={searchResults}
               onAdd={addTrack}
             />
+        </div>
+        <div className={styles.playlist}>
             <Playlist
               playlistName={playlistName}
               onNameChange={handleNameChange}
@@ -61,8 +65,8 @@ function App() {
               onRemove={removeTrack}
               onSave={savePlaylist}
             />
-          </div>
-      </div>
+        </div>     
+      </div>    
     </div>
   );
 };

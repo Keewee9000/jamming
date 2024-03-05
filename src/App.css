@@ -26,25 +26,24 @@ html,
   margin: 0;
 }
 
-h2 {
-  padding: 12px 40px;
-  margin-right: 10px;
-  background-color: rgb(255, 255, 255);
-  border-color: white;
-  border-radius: 8px;
-}
-
 .lists {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-  margin-top: 60px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
+.searchResults,
+.playlist {
+  width: 45%; /* Adjust width as needed */
+}
 
-@media only screen and (max-width: 1020px) {
-  .lists {
-    align-items: center;
-    flex-direction: column;
-  }
+.searchResults {
+  background-color: #f2f2f2; /* Example background color */
+  padding: 20px;
+}
+
+.playlist {
+  background-color: #ddd; /* Example background color */
+  padding: 20px;
 }
