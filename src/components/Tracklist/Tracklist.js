@@ -2,18 +2,21 @@ import React from 'react';
 import Track from '../Track/Track';
 import styles from './Tracklist.module.css'
 
-function Tracklist({ tracks, onAdd, onRemove }) {
+const Tracklist = (props) => {
   return (
     <div className="Tracklist">
-      {tracks.map((track) => (
-        <Track
-          key={track.id}
-          track={track}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          className={styles.tracks}
-        />
-      ))}
+      {props.tracks.map((track) => {
+        return (
+          <Track
+            track={track}
+            key={track.id}
+            onAdd={props.onAdd}
+            onRemove={props.onRemove}
+            isRemoval={props.isRemoval}
+            className={styles.tracks}
+          />
+          );
+      })}
     </div>
   );
 }

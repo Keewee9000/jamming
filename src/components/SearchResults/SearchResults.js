@@ -3,13 +3,11 @@ import Tracklist from '../Tracklist/Tracklist';
 import styles from './SearchResults.module.css'
 
 
-function SearchResults({ searchResults, onAdd}) {
-  const handleAddTrack = track => onAdd(track);
+const SearchResults = (props) => {
 
   return (
     <div className={styles.SearchResults}>
-      
-      <Tracklist tracks={searchResults} onAdd={handleAddTrack} />
+      <Tracklist tracks={props.searchResults} onAdd={props.onAdd} />
     </div>
   );
 }

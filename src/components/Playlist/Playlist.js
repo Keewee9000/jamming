@@ -1,23 +1,35 @@
-import React from 'react';
+
+import React, { useCallback } from 'react';
 import Tracklist from '../Tracklist/Tracklist';
 import styles from './Playlist.module.css';
 
-function Playlist({ playlistName, onNameChange, playlistTracks, onRemove, onSave }) {
+function Playlist(props) {
+
+  const handleNameChange = useCallback(
+    (event) => {
+      props.onNameChange(event.target.value);
+    },
+    [props.onNameChange]
+  );
 
   return (
     <div className={styles.Playlist}>
       <input
-        type="text"
-        value={playlistName}
-        onChange={onNameChange}
-        placeholder="New Playlist Name"
+        onChange={handleNameChange}
+        defaultValue={"My Playlist"}
         className={styles.PlaylistSearch}
       />
-      <h2>{playlistName}</h2>
-      <Tracklist tracks={playlistTracks} onRemove={onRemove} />
-      <button className={styles.saveButton} onClick={onSave}>Save to Spotify</button>
+      <h2>{props.playlistName}</h2>
+      <Tracklist 
+        tracks={props.playlistTracks} 
+        isRemoval={true} 
+        onRemove={props.onRemove} 
+      />
+      <button className={styles.saveButton} onClick={props.onSave}>
+        Save to Spotify
+      </button>
     </div>
   );
-}
+};
 
 export default Playlist;
