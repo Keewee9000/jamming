@@ -1,7 +1,7 @@
 body,
 html,
 #root {
-  height: 100%;
+  min-height: 100vh
 }
 
 
@@ -26,17 +26,23 @@ html,
   margin: 0;
 }
 
+h2 {
+  background-color: #fff; 
+  border-width: 0.7px;
+  border-radius: 8px;
+  padding: 10px 25px;
+}
+
 .lists {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .searchResults,
 .playlist {
   width: 45%; 
-  background-color: #f2f2f2;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -44,11 +50,11 @@ html,
 }
 
 .searchResults {
-  background-color: #f2f2f2; 
+ 
   padding: 20px;
 }
 
 .playlist {
-  background-color: #ddd; 
+  
   padding: 20px;
 }
