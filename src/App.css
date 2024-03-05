@@ -35,15 +35,20 @@ html,
 
 .searchResults,
 .playlist {
-  width: 45%; /* Adjust width as needed */
+  width: 45%; 
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .searchResults {
-  background-color: #f2f2f2; /* Example background color */
+  background-color: #f2f2f2; 
   padding: 20px;
 }
 
 .playlist {
-  background-color: #ddd; /* Example background color */
+  background-color: #ddd; 
   padding: 20px;
 }
