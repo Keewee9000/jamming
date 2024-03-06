@@ -46,7 +46,7 @@ function App() {
   return (
     <div className='App'>
       <div className='header'>
-        <h1>My Spotify Playlist Creator</h1>
+        <h1>Spotify Playlist Creator</h1>
         <SearchBar onSearch={search} />
       </div>
       <div className='lists'>
