@@ -1,6 +1,6 @@
 .Track{
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
     margin-top: 10px;
     width: 200px;
@@ -8,12 +8,8 @@
     
 }
 
-.add {
-    background-color: rgb(55, 126, 55);
-    border-radius: 12px;
-}
-
-.remove {
-    background-color: rgb(206, 18, 18);
-    border-radius: 12px;
+.TrackAction {
+    border: none;
+    background-color: #f9f9f9;
+    color: blueviolet;
 }

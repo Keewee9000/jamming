@@ -19,13 +19,13 @@ const Track = (props) => {
   const renderAction = () => {
     if (props.isRemoval) {
       return (
-        <button className="Track-action" onClick={handleRemove}>
+        <button className={styles.TrackAction} onClick={handleRemove}>
           -
         </button>
       );
     }
     return (
-      <button className="Track-action" onClick={handleAdd}>
+      <button className={styles.TrackAction} onClick={handleAdd}>
         +
       </button>
     );
