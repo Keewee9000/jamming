@@ -13,3 +13,9 @@
     background-color: #f9f9f9;
     color: blueviolet;
 }
+
+@media (max-width: 600px) {
+    .Track {
+        width: 90%;
+    }
+}
