@@ -14,8 +14,3 @@
     color: blueviolet;
 }
 
-@media (max-width: 600px) {
-    .Track {
-        width: 90%;
-    }
-}
